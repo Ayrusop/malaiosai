@@ -1,0 +1,164 @@
+/* Header Styling */
+.custom-header {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+/* Social Media Icons */
+.custom-social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-social-icons svg {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.custom-social-icons svg:hover {
+    color: black;
+}
+
+/* Navigation */
+.custom-navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.custom-nav-list {
+    display: flex;
+    gap: 1.5rem;
+    color: gray;
+    font-size: 1rem;
+    list-style-type: none;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.custom-nav-list li {
+    cursor: pointer;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.custom-nav-list li:hover {
+    color: black;
+    transform: translateY(-5px);
+}
+
+.custom-nav-list li:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-nav-list li:hover:after {
+    transform: scaleX(1);
+}
+
+/* Logo */
+.custom-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Sidebar Toggle */
+.custom-sidebar-toggle {
+    cursor: pointer;
+}
+
+/* Sidebar */
+.custom-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16rem;
+    height: 100%;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 1.5rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.custom-sidebar button {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.custom-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-sidebar li {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+
+
+/* .container {
+    width:100%;
+    text-align:center;
+    margin:30px 0;
+    font-family:sans-serif;
+  }
+  
+  .button {
+    display:inline-block;
+    height:60px;
+    line-height:60px;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    background-color:#16a756;
+    color:white;
+    border-radius:2px;
+    transition:0.3s;
+  }
+  
+  .button:hover {background:#19c664;}
+  
+  
+  .label-up {
+    display:block;
+    margin:0px 30px;
+    height:100%;
+    position:relative;
+    top:0%;
+    transition:0.3s;
+  }
+  
+  .button:hover .label-up {
+    top:-100%;
+  }
+  
+ 
+  .label-down {
+    display:block;
+    margin:0px 30px;
+    height:100%;
+    position:relative;
+    top:-100%;
+    transition:0.3s;
+  }
+  
+  .button:hover .label-down {
+    top:0%;
+  } */
