@@ -24,7 +24,7 @@
 }
 
 /* Navigation */
-.custom-navigation {
+/* .custom-navigation {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -70,7 +70,65 @@
 
 .custom-nav-list li:hover:after {
     transform: scaleX(1);
+} */
+.custom-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
+
+.custom-nav-list {
+    margin-top: 15px;
+    display: flex;
+    gap: 1.5rem;
+    color: gray;
+    font-size: 1rem;
+    list-style-type: none;
+}
+
+.custom-nav-list li {
+    cursor: pointer;
+    position: relative;
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+.custom-nav-list li:hover {
+    color: black;
+    /* transform: translateY(-5px);  */
+}
+
+.custom-nav-list li:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transform: scaleX(0); /* Hidden underline initially */
+}
+.label-up {
+    display:block;
+    /* margin:0px 30px; */
+    height:100%;
+    position:relative;
+    top:0%;
+    transition:0.3s ease;
+}
+.custom-nav-list li:hover:after {
+    transform: scaleX(1); /* Underline appears on hover */
+}
+
+
+.custom-nav-list li:hover .label-up {
+    top: -100%;  /* Move the original text up */
+}
+
 
 /* Logo */
 .custom-logo {
