@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Surrounding.css";
-import { FaArrowUp } from "react-icons/fa";
+import { FaLocationArrow } from "react-icons/fa";
 import ooty from "../images/ooty.png";
 import coonoor from "../images/coonoor.png";
 import Mudumalai from "../images/Mudumalai.png";
@@ -43,15 +43,16 @@ const Surrounding = () => {
     ];
 
     const faqs = [
-        { question: "Why is the moon sometimes out during the day?", answer: "The moon is visible during the day because of its orbit around the Earth and the way sunlight illuminates it." },
-        { question: "Why is the sky blue?", answer: "The sky appears blue due to the scattering of sunlight by the atmosphere. Shorter blue wavelengths scatter more than other colors." },
-        { question: "Will we ever discover aliens?", answer: "Scientists are constantly searching for extraterrestrial life using telescopes and space probes, but no confirmed evidence has been found yet." },
-        { question: "How much does the Earth weigh?", answer: "The Earth weighs approximately 5.97 × 10^24 kg, calculated based on gravitational force and mass distribution." },
-        { question: "How do airplanes stay up?", answer: "Airplanes generate lift through their wings' shape, which creates higher pressure below and lower pressure above, allowing them to fly." }
+        { question: "What is the check-in and check-out time?", answer: "The moon is visible during the day because of its orbit around the Earth and the way sunlight illuminates it." },
+        { question: "Do you provide meals?", answer: "The sky appears blue due to the scattering of sunlight by the atmosphere. Shorter blue wavelengths scatter more than other colors." },
+        { question: "Can we bring outside food?", answer: "Scientists are constantly searching for extraterrestrial life using telescopes and space probes, but no confirmed evidence has been found yet." },
+        { question: "Are pets allowed?", answer: "The Earth weighs approximately 5.97 × 10^24 kg, calculated based on gravitational force and mass distribution." },
+        { question: "Do you offer corporate retreat packages?", answer: "Airplanes generate lift through their wings' shape, which creates higher pressure below and lower pressure above, allowing them to fly." },
+        { question: "Do you offer discounts for long stays or group bookings?", answer: "Airplanes generate lift through their wings' shape, which creates higher pressure below and lower pressure above, allowing them to fly." }
     ];
 
     return (
-        <div className="surrounding-sec mt-5">
+        <div className="surrounding-sec mt-5 mb-5">
             <div className="text-center">
                 <h2 style={{ fontSize: "3rem" }}>Surrounding Delights</h2>
                 <p style={{ color: "#8C8C8C", fontSize: "1.5rem" }}>The Nilgiris region is a paradise filled with countless hidden gems waiting to be explored.</p>
@@ -70,7 +71,7 @@ const Surrounding = () => {
                                 <>
                                     <div className="hover-overlay"></div>
                                     <div className="hover-arrow" style={{ transform: `translate(${hoverState[index].x}px, ${hoverState[index].y}px)` }}>
-                                        <FaArrowUp />
+                                        <FaLocationArrow />
                                     </div>
                                 </>
                             )}
@@ -104,6 +105,8 @@ const Surrounding = () => {
                         ))}
                     </div>
                 </div>
+
+
             </div>
         </div>
     );

@@ -2,32 +2,20 @@
     font-size: 3rem;
     line-height: 1.5;
 }
-
-.exp-image-sec {
-    padding: 10px;
-    /* align-items: center; */
-    justify-items: center;
-    /* justify-content: space-between; */
-    /* margin: 2%; */
-}
-
 .exp-img-text {
     /* align-items: center; */
     position: relative;
-    margin: 20px;
+    /* margin: 2px; */
 }
-
 .exp-image {
 
     opacity: 1;
-    display: block;
-    height: auto;
+    /* display: block; */
+    /* height: auto; */
     transition: .5s ease;
     /* width: 100%; */
     backface-visibility: hidden;
 }
-
-/* Overlay effect for the image */
 .overlay {
     position: absolute;
     top: 0;
@@ -38,8 +26,6 @@
     opacity: 0;
     transition: opacity 0.5s ease;
 }
-
-/* Positioning text in the bottom left corner */
 .text {
     position: absolute;
     bottom: 10px; /* Positioning text to the bottom */
@@ -61,5 +47,5 @@
 }
 
 .refind-room{
-   padding: 3%;
+   /* padding: 3%; */
 }

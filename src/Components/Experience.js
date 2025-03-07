@@ -106,9 +106,12 @@ const Experience = () => {
            
                 <div className="row mt-5 refind-room">
                     <div className="col">
-                        <p className='exp-tit'>Refined Rooms <br />and Retreats</p>
+                        <div className='p-2'>
+                            <p className='exp-tit'>Refined Rooms <br />and Retreats</p>
                         <p style={{ color: "#8C8C8C", fontSize:"1.5rem" }} className='mt-5'>Step into a world of refined luxury, where each space is thoughtfully designed to complement the stunning natural beauty that surrounds you. Immerse yourself in an atmosphere of serene elegance, where every detail is carefully crafted to enhance your stay and offer the perfect sanctuary for relaxation and rejuvenation.</p>
-                    <img src={scene2} style={{ marginTop: "60px" }}/>
+                        </div>
+                        
+                    <img src={scene2} style={{ marginTop: "40px", height:"50%", width:"100%" }} className='p-2'/>
                     </div>
                     <div className="col">
                         <img src={scene} className='mt-5'/>

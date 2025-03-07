@@ -11,6 +11,7 @@ import HomeVideo from './Components/HomeVideo';
 import Experience from './Components/Experience';
 import Gallery from './Components/Gallery';
 import Surrounding from './Components/Surrounding';
+import Footer from './Components/Footer';
 function App() {
   return (
     <div className="App" >
@@ -20,6 +21,7 @@ function App() {
       <Experience/>
       <Gallery/>
       <Surrounding/>  
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,96 @@
+footer {
+    /* background: #C8D4E7; */
+    /* background: linear-gradient(59deg, #3A6073, #16222A); */
+    color: rgb(0, 0, 0);
+    margin-top: 100px;
+    border-top: 1px solid #8C8C8C;
+    border-bottom: 1px solid #8C8C8C;
+}
+
+/* footer a {
+    color: #000000;
+    font-size: 16px;
+    transition: 0.2s;
+    margin: 20px;
+    text-decoration: none;
+} */
+footer h4 {
+    color: #000000;
+
+}
+footer a:hover {
+    color: #1F2042;
+    text-decoration: none;
+    
+}
+
+.copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+    padding-top: 2em;
+    color: white;
+}
+
+/* Social icons */
+ul.social-network {
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-circle li a {
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #000000;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+.social-circle li a:hover {
+    transform: rotate(360deg);
+    transition: 0.3s;
+}
+
+/* Facebook */
+.social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+}
+
+/* LinkedIn */
+.social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+}
+
+/* Instagram */
+.social-network a.icoInstagram:hover {
+    background-color: #C13584;
+}
+.social-network a.icoWhatsapp:hover {
+    background-color: #25D366;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .footer-middle {
+        text-align: center;
+    }
+
+    .social-network li {
+        margin: 10px 0;
+    }
+}
+.list-unstyled li{
+    margin: 5px 0;
+    cursor: pointer;
+}

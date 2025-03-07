@@ -78,60 +78,71 @@
    padding: 3%;
    
 }
-
 .accordion {
-    width: 100%;
-  }
-  
-  .accordion-item {
-    border-bottom: 1px solid black; /* Simple black divider */
-  }
-  
-  .accordion-button {
-    width: 100%;
-    text-align: left;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: black;
-    background: none;
-    border: none;
-    outline: none;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .accordion-button:hover {
-    color: black;
-  }
-  
-  .accordion-content {
-    font-size: 1rem;
-    color: black;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
-    visibility: hidden;
-  }
-  
-  .accordion-item.active .accordion-content {
-    opacity: 1;
-    max-height: 500px;
-    visibility: visible;
-  }
-  
-  .accordion-button::after {
-    content: "+"; /* Minimal "+" symbol */
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-  }
-  
-  .accordion-item.active .accordion-button::after {
-    transform: rotate(45deg); /* Rotate to "×" when active */
-  }
-  
+  width: 100%;
+}
+
+.accordion-item {
+  border: none !important;
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Remove focus and active border */
+.accordion-button:focus, 
+.accordion-button:active {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+/* Accordion content animation */
+.accordion-content {
+  font-size: 1rem;
+  color: black;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+  visibility: hidden;
+}
+
+.accordion-item.active .accordion-content {
+  opacity: 1;
+  height: auto;
+  max-height: 500px;
+  visibility: visible;
+}
+
+/* Custom icon instead of Bootstrap default arrow */
+.accordion-button::after {
+  content: "+" !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  background-image: none !important; /* Remove Bootstrap default arrow */
+}
+
+.accordion-item.active .accordion-button::after {
+  transform: rotate(45deg);
+}
+
+
