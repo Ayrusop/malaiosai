@@ -1,0 +1,87 @@
+.custom-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    height: 80vh;
+  }
+  
+  .custom-column {
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scroll-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: seamlessScroll 15s linear infinite;
+  }
+  
+  /* Different speed for center column */
+  .center-column .scroll-container {
+    animation-duration: 20s;
+  }
+  
+  .custom-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-image {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    /* padding: 10px; */
+    opacity: 0;
+    /* transition: opacity 0.3s ease-in-out; */
+  }
+  
+  .custom-image-container:hover .custom-overlay {
+    opacity: 1;
+  }
+  
+  .custom-image-container:hover .custom-image {
+    /* transform: scale(1.05); */
+    /* transition: transform 0.3s ease; */
+  }
+  
+  /* Infinite Loop Scrolling Effect */
+  @keyframes seamlessScroll {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+  
+  /* Pause animation on hover */
+  /* .scroll-container:hover {
+    animation-duration: 30s;
+  } */
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .custom-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .custom-column {
+      width: 90%;
+    }
+  }
+  

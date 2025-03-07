@@ -2,15 +2,15 @@ import React from 'react'
 import "./welcome.css"
 const Welcome = () => {
     return (
-        <div class="row we-sec" >
-            <div class="col left-sec">
+        <div className="row we-sec" >
+            <div className="col left-sec">
                 <span style={{fontSize:"1.3rem"}}>                Welcome to Malaiosai, The Nilgiris
                 </span>
                 <p className='mt-2' style={{fontSize:"3rem"}}>
                 Your Perfect Escape<br/> in the Nilgiris
                 </p>
             </div>
-            <div class="col">
+            <div className="col" style={{fontSize:"1.5rem"}}>
                <div>
                Discover Malayosai, your perfect escape to luxury, nature, and relaxation in the breathtaking Nilgiris. Surrounded by lush tea estates and rolling hills, our premium villas and vacation properties are designed for comfort, peace, and rejuvenation.
                </div>
