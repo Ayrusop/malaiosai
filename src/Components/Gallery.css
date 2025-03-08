@@ -82,6 +82,11 @@
   
     .custom-column {
       width: 90%;
+     
+    }
+    .custom-gallery {
+  
+      height: 150vh;
     }
   }
   

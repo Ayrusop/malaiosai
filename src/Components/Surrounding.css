@@ -40,7 +40,7 @@
     transform: scale(1.05);
 }
 
-.hover-overlay {
+/* .hover-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,7 +48,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     transition: opacity 0.3s ease;
-}
+} */
 
 .hover-arrow {
     position: absolute;
@@ -145,4 +145,8 @@
   transform: rotate(45deg);
 }
 
-
+@media (max-width: 768px) {
+.sur-image-sec{
+  padding: 10%;
+}
+}

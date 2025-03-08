@@ -14,12 +14,12 @@ const images = [
     { src: gallery1, title: "Image 1", text: "Description for image 1" },
     { src: gallery2, title: "Image 2", text: "Description for image 2" },
     { src: gallery3, title: "Image 3", text: "Description for image 3" },
-    { src: gallery3, title: "Image 4", text: "Description for image 4" },
-    { src: gallery4, title: "Image 5", text: "Description for image 5" },
-    { src: gallery5, title: "Image 6", text: "Description for image 6" },
-    { src: gallery6, title: "Image 7", text: "Description for image 7" },
-    { src: gallery7, title: "Image 8", text: "Description for image 8" },
-    { src: gallery8, title: "Image 9", text: "Description for image 9" }
+    { src: gallery4, title: "Image 4", text: "Description for image 4" },
+    { src: gallery5, title: "Image 5", text: "Description for image 5" },
+    { src: gallery6, title: "Image 6", text: "Description for image 6" },
+    { src: gallery7, title: "Image 7", text: "Description for image 7" },
+    { src: gallery8, title: "Image 8", text: "Description for image 8" },
+    { src: gallery1, title: "Image 9", text: "Description for image 9" }
 ];
 const loopImages = [...images, ...images];
 const Gallery = () => {
@@ -32,7 +32,7 @@ const Gallery = () => {
                     <div className="scroll-container">
                         {loopImages.slice(0, 6).map((img, index) => (
                             <div key={index} className="custom-image-container">
-                                <img src={img.src} alt={img.title} className="custom-image" />
+                                <img src={img.src} alt={img.title} className="custom-image img-fluid" />
                                 <div className="custom-overlay">
                                     <h3>{img.title}</h3>
                                     <p>{img.text}</p>
@@ -46,7 +46,7 @@ const Gallery = () => {
                     <div className="scroll-container">
                         {loopImages.slice(6, 10).map((img, index) => (
                             <div key={index} className="custom-image-container">
-                                <img src={img.src} alt={img.title} className="custom-image" />
+                                <img src={img.src} alt={img.title} className="custom-image img-fluid" />
                                 <div className="custom-overlay">
                                     <h3>{img.title}</h3>
                                     <p>{img.text}</p>
@@ -60,7 +60,7 @@ const Gallery = () => {
                     <div className="scroll-container">
                         {loopImages.slice(10, 16).map((img, index) => (
                             <div key={index} className="custom-image-container">
-                                <img src={img.src} alt={img.title} className="custom-image" />
+                                <img src={img.src} alt={img.title} className="custom-image img-fluid" />
                                 <div className="custom-overlay">
                                     <h3>{img.title}</h3>
                                     <p>{img.text}</p>

@@ -89,6 +89,10 @@ ul.social-network li {
     .social-network li {
         margin: 10px 0;
     }
+    .list-unstyled li{
+        text-align: center;
+        justify-content: center;
+    }
 }
 .list-unstyled li{
     margin: 5px 0;

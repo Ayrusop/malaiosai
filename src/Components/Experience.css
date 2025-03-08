@@ -2,42 +2,48 @@
     font-size: 3rem;
     line-height: 1.5;
 }
+.exp-image-sec{
+    padding: 3%;
+}
 .exp-img-text {
-    /* align-items: center; */
     position: relative;
-    /* margin: 2px; */
+    overflow: hidden; /* Ensures content stays inside */
 }
-.exp-image {
 
-    opacity: 1;
-    /* display: block; */
-    /* height: auto; */
-    transition: .5s ease;
-    /* width: 100%; */
-    backface-visibility: hidden;
+.exp-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
 }
+.refind-room1{
+text-align: left;
+    p{
+        margin: 20px;
+}
+}
+/* Overlay styles */
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0.1;
-    width: 94%;
-    height: 99.5%;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+    inset: 0; /* Ensures the overlay fully covers the image */
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    align-items: flex-end; 
+    padding: 40px;
+    margin: 0 10px;
     opacity: 0;
-    transition: opacity 0.5s ease;
-}
-.text {
-    position: absolute;
-    bottom: 10px; /* Positioning text to the bottom */
-    left: 10px;
-    color: white;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    text-align: left;
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* Show the overlay and text when hovering over the image */
+/* Text inside overlay */
+.text {
+    color: white;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Hover effect */
 .exp-img-text:hover .overlay {
     opacity: 1;
 }
@@ -46,6 +52,71 @@
     opacity: 1;
 }
 
-.refind-room{
-   /* padding: 3%; */
+/* Responsive Design */
+@media (max-width: 992px) {
+    .exp-tit {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .exp-image {
+        height: 250px; /* Adjust image height for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .exp-tit {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .overlay {
+        padding: 10px;
+    }
+
+    .exp-image {
+        height: 400px; /* Adjust for smaller screens */
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp-tit {
+        font-size: 1.8rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .overlay {
+        padding: 10%;
+        margin: 3%;
+    }
+
+    .exp-image {
+        height: 400px;
+        padding: 2%;
+    }
+
+    .col {
+        width: 100%;
+    }
 }

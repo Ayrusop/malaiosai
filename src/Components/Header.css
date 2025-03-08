@@ -1,11 +1,10 @@
-/* Header Styling */
+/* Header */
 .custom-header {
     width: 98%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-
 }
 
 /* Social Media Icons */
@@ -23,63 +22,15 @@
     color: black;
 }
 
-/* Navigation */
-/* .custom-navigation {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-
-}
-
-.custom-nav-list {
-    display: flex;
-    gap: 1.5rem;
-    color: gray;
-    font-size: 1rem;
-    list-style-type: none;
-    transition: color 0.3s, transform 0.3s ease-in-out;
-}
-
-.custom-nav-list li {
-    cursor: pointer;
-    position: relative;
-    height: 40px;
-    line-height: 40px;
-    overflow: hidden;
-    transition: color 0.3s;
-    transition: color 0.3s, transform 0.3s ease-in-out;
-}
-
-.custom-nav-list li:hover {
-    color: black;
-    transform: translateY(-5px);
-}
-
-.custom-nav-list li:after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 100%;
-    background: black;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-.custom-nav-list li:hover:after {
-    transform: scaleX(1);
-} */
+/* Desktop Navigation */
 .custom-navigation {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 1.5rem;
 }
 
+/* Navigation List */
 .custom-nav-list {
-    margin-top: 15px;
     display: flex;
     gap: 1.5rem;
     color: gray;
@@ -98,7 +49,6 @@
 
 .custom-nav-list li:hover {
     color: black;
-    /* transform: translateY(-5px);  */
 }
 
 .custom-nav-list li:after {
@@ -110,25 +60,23 @@
     position: absolute;
     bottom: -3px;
     left: 0;
-    transform: scaleX(0); /* Hidden underline initially */
-}
-.label-up {
-    display:block;
-    /* margin:0px 30px; */
-    height:100%;
-    position:relative;
-    top:0%;
-    transition:0.3s ease;
-}
-.custom-nav-list li:hover:after {
-    transform: scaleX(1); /* Underline appears on hover */
+    transform: scaleX(0);
 }
 
+.label-up {
+    display: block;
+    position: relative;
+    top: 0%;
+    transition: 0.3s ease;
+}
+
+.custom-nav-list li:hover:after {
+    transform: scaleX(1);
+}
 
 .custom-nav-list li:hover .label-up {
-    top: -100%;  /* Move the original text up */
+    top: -100%;
 }
-
 
 /* Logo */
 .custom-logo {
@@ -136,12 +84,12 @@
     font-weight: bold;
 }
 
-/* Sidebar Toggle */
+/* Sidebar Toggle (Hidden on Desktop) */
 .custom-sidebar-toggle {
     cursor: pointer;
 }
 
-/* Sidebar */
+/* Sidebar (Mobile) */
 .custom-sidebar {
     position: fixed;
     top: 0;
@@ -152,11 +100,9 @@
     color: white;
     padding: 1.5rem;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.custom-sidebar button {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    display: flex;
+    z-index: 9999;
+    flex-direction: column;
 }
 
 .custom-sidebar ul {
@@ -169,54 +115,29 @@
     margin-bottom: 1rem;
 }
 
+/* Hide Sidebar on Desktop */
+@media (min-width: 1024px) {
+    .custom-sidebar {
+        display: none;
+    }
+}
 
+/* Mobile View: Center Logo, Sidebar Items */
+@media (max-width: 1023px) {
+    .custom-navigation {
+        display: none; /* Hide desktop nav */
+    }
 
-/* .container {
-    width:100%;
-    text-align:center;
-    margin:30px 0;
-    font-family:sans-serif;
-  }
-  
-  .button {
-    display:inline-block;
-    height:60px;
-    line-height:60px;
-    overflow:hidden;
-    position:relative;
-    text-align:center;
-    background-color:#16a756;
-    color:white;
-    border-radius:2px;
-    transition:0.3s;
-  }
-  
-  .button:hover {background:#19c664;}
-  
-  
-  .label-up {
-    display:block;
-    margin:0px 30px;
-    height:100%;
-    position:relative;
-    top:0%;
-    transition:0.3s;
-  }
-  
-  .button:hover .label-up {
-    top:-100%;
-  }
-  
- 
-  .label-down {
-    display:block;
-    margin:0px 30px;
-    height:100%;
-    position:relative;
-    top:-100%;
-    transition:0.3s;
-  }
-  
-  .button:hover .label-down {
-    top:0%;
-  } */
+    .custom-header {
+        justify-content: space-between;
+    }
+
+    .custom-logo {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .custom-sidebar-toggle {
+        display: block;
+    }
+}

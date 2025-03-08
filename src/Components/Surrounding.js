@@ -66,10 +66,10 @@ const Surrounding = () => {
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={() => handleMouseLeave(index)}
                         >
-                            <img className="hover-image" src={place.img} alt={place.title} />
+                            <img className="hover-image img-fluid" src={place.img} alt={place.title} />
                             {hoverState[index]?.isHovered && (
                                 <>
-                                    <div className="hover-overlay"></div>
+                                    {/* <div className="hover-overlay"></div> */}
                                     <div className="hover-arrow" style={{ transform: `translate(${hoverState[index].x}px, ${hoverState[index].y}px)` }}>
                                         <FaLocationArrow />
                                     </div>

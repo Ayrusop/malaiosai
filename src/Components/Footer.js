@@ -17,7 +17,7 @@ const Footer = () => {
                                     {/* <img src={logo} alt='logo' className='logo-on-footer' /> */}
                                     <h2 >MALAIOSAI</h2>
                                     <p className='mt-3'>MALAIOSAI, THE NILGIRIS   <MdArrowOutward style={{ paddingLeft: "5px", fontSize: "1.5rem" }} /></p>
-                                    <a>viwe map</a>
+                                    <a className='mb-4'>viwe map</a>
                                 </div>
                             </div>
                             <div className="col-md-3 col-sm-6">
@@ -34,14 +34,14 @@ const Footer = () => {
                             </div>
                             <div className="col-md-3 col-sm-6">
                                 {/* Column3 */}
-                                <div className="footer text-dark">
+                                <div className="text-dark">
                                     <h4>Reach us</h4>
                                     <ul className="list-unstyled mt-4">
-                                        <li className='d-flex '>
+                                        <li className='d-flex'>
                                             <p><FaLocationArrow /></p>
                                             <p style={{ paddingLeft: "10px" }}>MALAIOSAI RESORTS, <br />NILGIRIS</p>
                                         </li>
-                                        <li className='d-flex align-items-center'>
+                                        <li className='d-flex '>
                                             <p><FaPhoneAlt /></p>
                                             <p style={{ paddingLeft: "10px" }}>+91 9786902416</p>
                                         </li>
@@ -75,7 +75,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='text-center'>
-                    <img src={malaiosaifoo} style={{ padding: "10px" }} />
+                    <img src={malaiosaifoo} style={{ padding: "10px" }} className='img-fluid'/>
                 </div>
 
             </footer>
