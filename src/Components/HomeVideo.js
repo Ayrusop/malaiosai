@@ -1,21 +1,21 @@
 import React from "react";
 import "./HomeVideo.css";
 import { FaArrowDown } from "react-icons/fa";
-import vdo from './landscape.mp4';
+import homeimg from './malaiosai banner.png';
+import { Link } from 'react-scroll';
 const HomeVideo = () => {
     return (
         <div className="home-video-container">
-            <video autoPlay loop muted className="home-video">
-                <source src={vdo} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            <img className="home-video img-fluid" src={homeimg} alt="home-img"/>
+
             <div className="home-video-overlay">
                 <div className="home-video-text">
-                    <p>Refined comfort, serene </p>
-                    <p>sophistication awaits.</p>
+                    {/* <p>Refined comfort, serene </p> */}
+                    <p>Discover More</p>
                 </div>
                 <div className="home-video-arrow">
-                    <FaArrowDown />
+                    <Link to="wel-come" smooth={true} duration={1000}><FaArrowDown /> </Link>
+
                 </div>
             </div>
         </div>

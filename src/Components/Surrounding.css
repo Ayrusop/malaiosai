@@ -150,3 +150,11 @@
   padding: 10%;
 }
 }
+.trip-time{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.trip-time .col p {
+  font-size: 1.2rem;
+}

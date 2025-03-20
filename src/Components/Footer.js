@@ -1,8 +1,7 @@
 import React from 'react';
-import { FaLocationArrow, FaLinkedin, FaInstagram, FaPhoneAlt, FaMailchimp } from 'react-icons/fa'; // Importing icons
+import { FaLocationArrow,FaPhoneAlt } from 'react-icons/fa'; // Importing icons
 import './Footer.css';
 import malaiosaifoo from '../images/MALAIOSAI.png';
-import { FaWhatsapp } from 'react-icons/fa6';
 import { MdEmail, MdArrowOutward } from "react-icons/md";
 const Footer = () => {
     return (
@@ -17,7 +16,7 @@ const Footer = () => {
                                     {/* <img src={logo} alt='logo' className='logo-on-footer' /> */}
                                     <h2 >MALAIOSAI</h2>
                                     <p className='mt-3'>MALAIOSAI, THE NILGIRIS   <MdArrowOutward style={{ paddingLeft: "5px", fontSize: "1.5rem" }} /></p>
-                                    <a className='mb-4'>viwe map</a>
+                                    <a className='mb-4' href='https://g.co/kgs/JpJoc9J' style={{textDecoration:"none", color:"black"}}>viwe map</a>
                                 </div>
                             </div>
                             <div className="col-md-3 col-sm-6">
@@ -39,9 +38,10 @@ const Footer = () => {
                                     <ul className="list-unstyled mt-4">
                                         <li className='d-flex'>
                                             <p><FaLocationArrow /></p>
-                                            <p style={{ paddingLeft: "10px" }}>MALAIOSAI RESORTS, <br />NILGIRIS</p>
+                                            <a ><p style={{ paddingLeft: "10px" }}>MALAIOSAI RESORTS, <br />NILGIRIS</p></a>
+                                            
                                         </li>
-                                        <li className='d-flex '>
+                                        <li className='d-flex'>
                                             <p><FaPhoneAlt /></p>
                                             <p style={{ paddingLeft: "10px" }}>+91 9786902416</p>
                                         </li>
@@ -57,12 +57,13 @@ const Footer = () => {
                                 <h4>Social Media</h4>
                                 <ul className="list-unstyled mt-4 text-dark">
                                     <li className='d-flex '>
-                                        <p style={{ paddingRight: "10px" }}>Instagram</p>
+                                        <a href="https://www.instagram.com/malaiosai__?igsh=djFoN3hwdXQzM3Zw" style={{textDecoration:"none", color:"black"}}><p style={{ paddingRight: "10px" }}>Instagram</p></a>                
                                         <p><MdArrowOutward style={{ fontSize: "1.5rem" }} /></p>
 
                                     </li>
                                     <li className='d-flex align-items-center'>
-                                        <p style={{ paddingRight: "10px" }}>Whatsapp</p>
+                                        <a href="https://api.whatsapp.com/send?phone=+919360713003&text=" style={{textDecoration:"none", color:"black"}}> <p style={{ paddingRight: "10px" }}>Whatsapp</p> </a>
+                                        
                                         <p><MdArrowOutward style={{ fontSize: "1.5rem" }} /></p>
                                     </li>
 
@@ -75,7 +76,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='text-center'>
-                    <img src={malaiosaifoo} style={{ padding: "10px" }} className='img-fluid'/>
+                    <img src={malaiosaifoo} style={{ padding: "10px" }} className='img-fluid' alt={malaiosaifoo}/>
                 </div>
 
             </footer>

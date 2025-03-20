@@ -2,7 +2,7 @@ import React from 'react'
 import "./welcome.css"
 const Welcome = () => {
     return (
-        <div className="row we-sec" >
+        <div className="row we-sec mt-5" >
             <div className="col left-sec">
                 <span style={{fontSize:"1.3rem"}}>                Welcome to Malaiosai, The Nilgiris
                 </span>

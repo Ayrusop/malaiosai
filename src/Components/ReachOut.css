@@ -1,0 +1,65 @@
+.trip-time-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    min-height: 100vh;
+    /* background-color: #f9f9f9; */
+}
+  
+.trip-time-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+  
+.trip-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+  
+.trip-time-section {
+    margin-bottom: 2rem;
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(20px);
+}
+  
+.trip-time-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+.trip-time-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+  
+.trip-time-section p {
+    color: #8c8c8c;
+}
+  
+.trip-time-images {
+    flex: 1;
+    position: relative;
+    height: 400px;
+}
+  
+.trip-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+.trip-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+  
+.trip-image.active {
+    opacity: 1;
+}

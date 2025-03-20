@@ -3,7 +3,7 @@
     justify-content: center;
     gap: 20px;
     overflow: hidden;
-    height: 80vh;
+    height: 100vh;
   }
   
   .custom-column {
@@ -49,13 +49,13 @@
     /* transition: opacity 0.3s ease-in-out; */
   }
   
-  .custom-image-container:hover .custom-overlay {
+  /* .custom-image-container:hover .custom-overlay {
     opacity: 1;
-  }
+  } */
   
   .custom-image-container:hover .custom-image {
-    /* transform: scale(1.05); */
-    /* transition: transform 0.3s ease; */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
   }
   
   /* Infinite Loop Scrolling Effect */
@@ -69,9 +69,16 @@
   }
   
   /* Pause animation on hover */
-  /* .scroll-container:hover {
-    animation-duration: 30s;
-  } */
+  .scroll-container {
+    animation-play-state: running;
+    transition: animation-play-state 0.3s ease;
+  }
+  
+  .scroll-container:hover {
+    animation-play-state: paused;
+    
+  }
+  
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -90,3 +97,76 @@
     }
   }
   
+ /* Modal Overlay */
+.gallery-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  max-width: 600px;
+  background: rgba(31, 30, 30, 0.397);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Background Overlay */
+.gallery-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+/* Image inside Modal */
+.modal-image {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(226, 15, 15);
+}
+
+/* Navigation Buttons */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.712);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.view-gallery-btn{
+  padding: 15px;
+  background: none;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.view-gallery-btn:hover{
+  background: #01fc01a8;
+  color: white;
+}

@@ -7,11 +7,11 @@ import Mudumalai from "../images/Mudumalai.png";
 import Pykara from "../images/Pykara.png";
 import emerald from "../images/emerald.png";
 import Kodanad from "../images/Kodanad.png";
-import dumy from "../images/Rectangle 2153.png";
+
 
 const Surrounding = () => {
     const [hoverState, setHoverState] = useState({});
-    const [activeIndex, setActiveIndex] = useState(null);
+    
 
     const handleMouseMove = (e, index) => {
         const { left, top, height } = e.currentTarget.getBoundingClientRect();
@@ -29,27 +29,18 @@ const Surrounding = () => {
         setHoverState((prev) => ({ ...prev, [index]: { ...prev[index], isHovered: false } }));
     };
 
-    const toggleAccordion = (index) => {
-        setActiveIndex(activeIndex === index ? null : index);
-    };
+   
 
     const places = [
-        { title: "Ooty – Queen of Hill Stations", img: ooty, description: "Explore Ooty’s tea gardens, Ooty Lake, Nilgiri Mountain Railway, Botanical Gardens, and Doddabetta Peak.", link: "/ooty" },
-        { title: "Coonoor – Peaceful Hill Retreat", img: coonoor, description: "Discover Coonoor’s Sim’s Park, Lamb’s Rock, Dolphin’s Nose, and tea estate tours.", link: "/coonoor" },
-        { title: "Mudumalai – Wildlife Paradise", img: Mudumalai, description: "Spot tigers, elephants, and leopards at Mudumalai National Park. Enjoy thrilling jungle safaris.", link: "/mudumalai" },
-        { title: "Pykara – Tranquil Lake & Waterfalls", img: Pykara, description: "Relax at Pykara’s serene lake, surrounded by shola forests. Witness the breathtaking Pykara Waterfalls and enjoy peaceful boating experiences", link: "/ooty" },
-        { title: "Emerald Lake – Nature’s Gem", img: emerald, description: "Capture the beauty of Emerald Lake’s emerald-green waters. A picturesque spot for photography, picnics, and soaking in nature’s tranquility", link: "/coonoor" },
-        { title: "Kotagiri – Scenic Hill Station", img: Kodanad, description: "Visit Kotagiri for Kodanad Viewpoint, Catherine Falls, and lush tea estates. A quiet hill station with panoramic views near Malayosai.", link: "/mudumalai" },
+        { title: "Ooty – Queen of Hill Stations", img: ooty, description: "Explore Ooty’s tea gardens, Ooty Lake, Nilgiri Mountain Railway, Botanical Gardens, and Doddabetta Peak.", link: "https://www.google.com/maps/dir/Misty+mount,+Balacola,+Tamil+Nadu+643003/Ooty,+Tamil+Nadu/@11.3854656,76.7148509,14z/data=!4m13!4m12!1m5!1m1!1s0x3ba8956608c11465:0x53c76b094b438b8e!2m2!1d76.7411629!2d11.3609592!1m5!1m1!1s0x3ba8bd84b5f3d78d:0x179bdb14c93e3f42!2m2!1d76.6950324!2d11.4102038?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" },
+        { title: "Coonoor – Peaceful Hill Retreat", img: coonoor, description: "Discover Coonoor’s Sim’s Park, Lamb’s Rock, Dolphin’s Nose, and tea estate tours.", link: "https://www.google.com/maps/dir/Misty+mount,+Balacola,+Tamil+Nadu+643003/COONOOR+BUS+STAND,+Alwarpet,+Coonoor,+Tamil+Nadu/@11.3492432,76.7553999,14z/data=!4m13!4m12!1m5!1m1!1s0x3ba8956608c11465:0x53c76b094b438b8e!2m2!1d76.7411629!2d11.3609592!1m5!1m1!1s0x3ba894ec31ad5f43:0xa0fd9955d14ff0bc!2m2!1d76.7943966!2d11.3428065?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" },
+        { title: "Mudumalai – Wildlife Paradise", img: Mudumalai, description: "Spot tigers, elephants, and leopards at Mudumalai National Park. Enjoy thrilling jungle safaris.", link: "https://www.google.com/maps/dir/Misty+mount,+Balacola,+Tamil+Nadu+643003/Pykara+Waterfalls,+River,+Pykara,+Sholur,+Tamil+Nadu/@11.4168857,76.6336445,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3ba8956608c11465:0x53c76b094b438b8e!2m2!1d76.7411629!2d11.3609592!1m5!1m1!1s0x3ba8a3b05918eef7:0xe19d4ee3d1e2a9ec!2m2!1d76.6041457!2d11.4728995?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" },
+        { title: "Pykara – Tranquil Lake & Waterfalls", img: Pykara, description: "Relax at Pykara’s serene lake, surrounded by shola forests. Witness the breathtaking Pykara Waterfalls and enjoy peaceful boating experiences", link: "https://www.google.com/maps/dir/Misty+mount,+Balacola,+Tamil+Nadu+643003/Emerald+Lake,+Tamil+Nadu/@11.3452915,76.6392789,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3ba8956608c11465:0x53c76b094b438b8e!2m2!1d76.7411629!2d11.3609592!1m5!1m1!1s0x3ba899c76985b869:0x5b6d6ce30e619a82!2m2!1d76.6196097!2d11.3322754?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" },
+        { title: "Emerald Lake – Nature’s Gem", img: emerald, description: "Capture the beauty of Emerald Lake’s emerald-green waters. A picturesque spot for photography, picnics, and soaking in nature’s tranquility", link: "https://www.google.com/maps/dir/Misty+mount,+Balacola,+Tamil+Nadu+643003/Mudumalai+Tiger+Reserve/@11.4920795,76.6420574,12z/data=!4m13!4m12!1m5!1m1!1s0x3ba8956608c11465:0x53c76b094b438b8e!2m2!1d76.7411629!2d11.3609592!1m5!1m1!1s0x3ba8a883ad22006b:0x95719e71c7f9c63!2m2!1d76.5345221!2d11.5622767?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" },
+        { title: "Kotagiri – Scenic Hill Station", img: Kodanad, description: "Visit Kotagiri for Kodanad Viewpoint, Catherine Falls, and lush tea estates. A quiet hill station with panoramic views near Malayosai.", link: "https://www.google.com/maps/dir/Misty+mount,+Balacola,+Tamil+Nadu+643003/Kotagiri,+Tamil+Nadu/@11.3932574,76.7583098,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3ba8956608c11465:0x53c76b094b438b8e!2m2!1d76.7411629!2d11.3609592!1m5!1m1!1s0x3ba8c02f379bca31:0xf7b63bc2a4ce6aab!2m2!1d76.8617275!2d11.4217666?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" },
     ];
 
-    const faqs = [
-        { question: "What is the check-in and check-out time?", answer: "The moon is visible during the day because of its orbit around the Earth and the way sunlight illuminates it." },
-        { question: "Do you provide meals?", answer: "The sky appears blue due to the scattering of sunlight by the atmosphere. Shorter blue wavelengths scatter more than other colors." },
-        { question: "Can we bring outside food?", answer: "Scientists are constantly searching for extraterrestrial life using telescopes and space probes, but no confirmed evidence has been found yet." },
-        { question: "Are pets allowed?", answer: "The Earth weighs approximately 5.97 × 10^24 kg, calculated based on gravitational force and mass distribution." },
-        { question: "Do you offer corporate retreat packages?", answer: "Airplanes generate lift through their wings' shape, which creates higher pressure below and lower pressure above, allowing them to fly." },
-        { question: "Do you offer discounts for long stays or group bookings?", answer: "Airplanes generate lift through their wings' shape, which creates higher pressure below and lower pressure above, allowing them to fly." }
-    ];
+
 
     return (
         <div className="surrounding-sec mt-5 mb-5">
@@ -66,7 +57,10 @@ const Surrounding = () => {
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={() => handleMouseLeave(index)}
                         >
-                            <img className="hover-image img-fluid" src={place.img} alt={place.title} />
+                            <a href={place.link} target="_blank" rel="noopener noreferrer">
+                                <img className="hover-image img-fluid" src={place.img} alt={place.title} />
+                            </a>
+
                             {hoverState[index]?.isHovered && (
                                 <>
                                     {/* <div className="hover-overlay"></div> */}
@@ -84,30 +78,7 @@ const Surrounding = () => {
                     </div>
                 ))}
             </div>
-
-            {/* FAQ Section */}
-            <div className="row reachout-sec mt-5 d-flex">
-                <div className="col-lg-6 col-md-6 col-12 text-start">
-                    <h2 style={{ fontSize: "3rem" }}>Frequently Asked <br />Questions</h2>
-                    <p style={{ fontSize: "1.2rem", color: "#8C8C8C" }}>For any unanswered questions, reach out via contact.<br />We’ll respond within a day to assist you.</p>
-                </div>
-                <div className="col-lg-6 col-md-6 col-12 text-start">
-                    <div className="accordion">
-                        {faqs.map((faq, index) => (
-                            <div key={index} className={`accordion-item ${activeIndex === index ? "active" : ""}`}>
-                                <button onClick={() => toggleAccordion(index)} className="accordion-button">
-                                    {faq.question}
-                                </button>
-                                <div className="accordion-content">
-                                    <p>{faq.answer}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-
-            </div>
+            
         </div>
     );
 };
