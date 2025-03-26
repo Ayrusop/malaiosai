@@ -1,5 +1,6 @@
 .trip-time-container {
     display: flex;
+    /* flex-direction: column; */
     justify-content: space-between;
     align-items: center;
     padding: 3rem;
@@ -63,3 +64,8 @@
 .trip-image.active {
     opacity: 1;
 }
+@media (max-width: 768px) {
+    .trip-time-container{
+        display: none;
+    }
+  }

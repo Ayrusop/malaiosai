@@ -15,6 +15,7 @@ import { Element } from "react-scroll";
 import ReachOut from './Components/ReachOut';
 // import  FontAwesomeIcon  from '@fortawesome/react-fontawesome';
 import { FaWhatsapp } from "react-icons/fa";
+// import StickyTextWithImages from './Components/trst';
 
 function App() {
   const handleWhatsAppClick = () => {
@@ -38,6 +39,7 @@ function App() {
       <Element name="reach-out">
         <ReachOut />
       </Element>
+      {/* <StickyTextWithImages/> */}
       <Footer id="footer" />
 
       {/* Floating Buttons */}

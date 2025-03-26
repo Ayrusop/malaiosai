@@ -66,8 +66,8 @@ const Gallery = () => {
         setSelectedImage(images[newIndex].src);
     };
     return (
-        <>
-            <h2 className="text-center mt-5" style={{ fontSize: "3rem" }}>The Gallery of Elegance</h2>
+        <div className="gallery-con">
+            <h2 className="text-center" style={{ fontSize: "3rem" }}>The Gallery of Elegance</h2>
             <div className="custom-gallery mt-5">
 
                 <div className="column custom-column">
@@ -107,7 +107,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
-            <div className="text-center mt-5">
+            <div className="text-center mt-5 mb-5">
             <button className="view-gallery-btn" onClick={() => openGallery(0)}>View Gallery</button>
             </div>
 
@@ -123,7 +123,7 @@ const Gallery = () => {
                 </>
             )}
 
-        </>
+        </div>
 
     );
 };

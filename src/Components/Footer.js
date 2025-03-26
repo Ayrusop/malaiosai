@@ -16,7 +16,7 @@ const Footer = () => {
                                     {/* <img src={logo} alt='logo' className='logo-on-footer' /> */}
                                     <h2 >MALAIOSAI</h2>
                                     <p className='mt-3'>MALAIOSAI, THE NILGIRIS   <MdArrowOutward style={{ paddingLeft: "5px", fontSize: "1.5rem" }} /></p>
-                                    <a className='mb-4' href='https://g.co/kgs/JpJoc9J' style={{textDecoration:"none", color:"black"}}>viwe map</a>
+                                    <a className='mb-4' href='https://g.co/kgs/JpJoc9J' style={{textDecoration:"none", color:"black"}}>view map</a>
                                 </div>
                             </div>
                             <div className="col-md-3 col-sm-6">
@@ -43,7 +43,7 @@ const Footer = () => {
                                         </li>
                                         <li className='d-flex'>
                                             <p><FaPhoneAlt /></p>
-                                            <p style={{ paddingLeft: "10px" }}>+91 9786902416</p>
+                                            <p style={{ paddingLeft: "10px" }}>+91 9360713003</p>
                                         </li>
                                         <li className='d-flex align-items-center'>
                                             <p style={{ fontSize: "1.2rem" }}><MdEmail /></p>
