@@ -67,48 +67,40 @@ const Gallery = () => {
     };
     return (
         <div className="gallery-con">
-            <h2 className="text-center" style={{ fontSize: "3rem" }}>The Gallery of Elegance</h2>
-            <div className="custom-gallery mt-5">
-
-                <div className="column custom-column">
-                    <div className="scroll-container">
-                        {loopImages.slice(0, 6).map((img, index) => (
-                            <div key={index} className="custom-image-container">
-                                <img src={img.src} alt={img.title} className="custom-image img-fluid" />
-                                <div className="custom-overlay">
-
-                                </div>
+            <h2 className="text-center" style={{ fontSize: "3rem" }}>The Gallery of <br/>Elegance</h2>
+            <div className="desktop-gallery mt-5">
+                <div className="custom-gallery">
+                    {Array(3).fill().map((_, colIndex) => (
+                        <div key={colIndex} className={`custom-column ${colIndex === 1 ? "center-column" : ""}`}>
+                            <div className="scroll-container">
+                                {loopImages.slice(colIndex * 5, (colIndex + 1) * 5).map((img, index) => (
+                                    <div key={index} className="custom-image-container">
+                                        <img src={img.src} alt={img.title} className="custom-image img-fluid" />
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="column custom-column center-column">
-                    <div className="scroll-container">
-                        {loopImages.slice(6, 10).map((img, index) => (
-                            <div key={index} className="custom-image-container">
-                                <img src={img.src} alt={img.title} className="custom-image img-fluid" />
-
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="column custom-column">
-                    <div className="scroll-container">
-                        {loopImages.slice(10, 16).map((img, index) => (
-                            <div key={index} className="custom-image-container">
-                                <img src={img.src} alt={img.title} className="custom-image img-fluid" />
-                                <div className="custom-overlay">
-
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
+
+            {/* MOBILE MARQUEE GALLERY */}
+            <div className="mobile-gallery mt-5">
+                {Array(3).fill().map((_, rowIndex) => (
+                    <div key={rowIndex} className="mobile-row">
+                        <div className="scroll-content">
+                            {[...loopImages.slice(rowIndex * 5, (rowIndex + 1) * 5),
+                            ...loopImages.slice(rowIndex * 5, (rowIndex + 1) * 5)] // Duplicate images
+                                .map((img, index) => (
+                                    <img key={index} src={img.src} alt={img.title} />
+                                ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+
             <div className="text-center mt-5 mb-5">
-            <button className="view-gallery-btn" onClick={() => openGallery(0)}>View Gallery</button>
+                <button className="view-gallery-btn" onClick={() => openGallery(0)}>View Gallery</button>
             </div>
 
             {selectedImage && (

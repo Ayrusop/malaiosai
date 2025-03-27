@@ -9,6 +9,8 @@ import Scenic from "../images/Scenic.png"
 
 import room1 from '../images/rooms/room1.png'
 import room2 from '../images/rooms/room2.png'
+import room21 from '../images/rooms/room01.png'
+import room22 from '../images/rooms/room02.png'
 import room3 from '../images/rooms/room3.png'
 import room4 from '../images/rooms/room4.png'
 import room5 from '../images/rooms/room5.png'
@@ -44,7 +46,9 @@ const images = [
     room7,
     room8,
     room9,
-    room10
+    room10,
+    room21,
+    room22
 ];
 const images1 = [
     room11,

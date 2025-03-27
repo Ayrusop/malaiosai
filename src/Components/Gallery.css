@@ -86,24 +86,62 @@
   }
   
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .custom-gallery {
-      flex-direction: column;
-      align-items: center;
-    }
-    .gallery-con{
-      margin-top: -800px;
-    }
-    .custom-column {
-      width: 90%;
-     
-    }
-    .custom-gallery {
-  
-      height: 150vh;
-    }
+/* Default: Show vertical gallery, hide horizontal */
+/* Default: Desktop vertical gallery */
+.desktop-gallery {
+  display: flex;
+}
+
+/* Mobile gallery hidden by default */
+.mobile-gallery {
+  display: none;
+}
+
+/* Infinite horizontal scrolling (Marquee Effect) */
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0%);
   }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-gallery {
+    display: none;
+  }
+
+  .mobile-gallery {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .gallery-con{
+    margin-top: -500px;
+  }
+  .mobile-row {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    gap: 15px;
+    position: relative;
+  }
+
+  .mobile-row .scroll-content {
+    display: flex;
+    /* gap: 15px; */
+    animation: marqueeScroll 25s linear infinite;
+  }
+
+  .mobile-row img {
+    width: 70vw;
+    /* border-radius: 10px; */
+  }
+}
+
+
   
  /* Modal Overlay */
 .gallery-modal {
